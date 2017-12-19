@@ -21,9 +21,13 @@ Core Motion框架从iOS设备的板载硬件（包括加速计，陀螺仪，计
 ## 加速计
 ![加速计](https://user-gold-cdn.xitu.io/2017/12/15/16059a34e05eb382?w=770&h=880&f=png&s=46000)
 `该图为，加速度计沿x，y和z轴的速度变化`
+
+加速度计测量沿一个轴的速度变化。 所有的iOS设备都有一个三轴加速度计，它在图1所示的三个轴中的每一个轴上提供加速度值。加速度计报告的值以重力加速度的增量进行测量，值1.0代表9.8米的加速度 每秒（每秒）在给定的方向。 取决于加速度的方向，加速度值可能是正值或负值。
 ## 陀螺仪
 ![陀螺仪](https://user-gold-cdn.xitu.io/2017/12/15/160598d4b9cfab23?w=778&h=927&f=png&s=62418)
 `该图为，旋转反向速率对陀螺仪绕x，y和z轴的影响变化`
+
+陀螺仪测量设备围绕空间轴旋转的速率。 许多iOS设备都有一个三轴陀螺仪，它可以在图1所示的三个轴中的每一个轴上提供旋转值。旋转值以给定轴每秒的弧度为单位进行测量。 根据旋转的方向，旋转值可以是正值或负值。
 ## 代码示例
 ### Push方式获取数据
 #### 加速度计   
@@ -199,26 +203,24 @@ if ([manager isDeviceMotionAvailable] && ![manager isDeviceMotionActive]){
 ### 加速度计拓展功能
 ![](https://user-gold-cdn.xitu.io/2017/12/18/160691890901b471?w=317&h=279&f=gif&s=1323398)
 ```
-    CMMotionManager *manager = [[CMMotionManager alloc] init];
-    manager.accelerometerUpdateInterval = 0.1;
+CMMotionManager *manager = [[CMMotionManager alloc] init];
+manager.accelerometerUpdateInterval = 0.1;
     
-    if ([manager isAccelerometerAvailable] && ![manager isAccelerometerActive]){
+if ([manager isAccelerometerAvailable] && ![manager isAccelerometerActive]){
         
-        NSOperationQueue *queue = [[NSOperationQueue alloc] init];
-        [manager startAccelerometerUpdatesToQueue:queue
-                                      withHandler:^(CMAccelerometerData *accelerometerData, NSError *error)
-         {
-             CMAcceleration acceleration = accelerometerData.acceleration;
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    [manager startAccelerometerUpdatesToQueue:queue
+                                  withHandler:^(CMAccelerometerData *accelerometerData, NSError *error)
+     {
+         CMAcceleration acceleration = accelerometerData.acceleration;
              
-             if (acceleration.x < -2.0) {
-                 dispatch_async(dispatch_get_main_queue(), ^{
-                     [self.navigationController popViewControllerAnimated:YES];
-                 });
-             }
-             
-             
-         }];
-    }   
+         if (acceleration.x < -2.0) {
+             dispatch_async(dispatch_get_main_queue(), ^{
+                 [self.navigationController popViewControllerAnimated:YES];
+             });
+         }
+     }];
+}   
 ```
 ![](https://user-gold-cdn.xitu.io/2017/12/19/1606cddaac02276a?w=300&h=300&f=jpeg&s=8923)
 
