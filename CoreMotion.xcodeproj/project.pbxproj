@@ -13,6 +13,10 @@
 		A28786761FE75CDE003C7EED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A28786751FE75CDE003C7EED /* Assets.xcassets */; };
 		A28786791FE75CDE003C7EED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A28786771FE75CDE003C7EED /* LaunchScreen.storyboard */; };
 		A287867C1FE75CDE003C7EED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A287867B1FE75CDE003C7EED /* main.m */; };
+		A28786B91FE7D1AF003C7EED /* BasicDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = A28786B81FE7D1AF003C7EED /* BasicDemoController.m */; };
+		A28786BC1FE7D1C3003C7EED /* ImageDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = A28786BB1FE7D1C3003C7EED /* ImageDemoController.m */; };
+		A28786BF1FE7D1D3003C7EED /* PopDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = A28786BE1FE7D1D3003C7EED /* PopDemoController.m */; };
+		A29093E11FE8AA5400634E1D /* timg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A29093E01FE8A98500634E1D /* timg.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,13 @@
 		A28786781FE75CDE003C7EED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A287867A1FE75CDE003C7EED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A287867B1FE75CDE003C7EED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A28786B71FE7D1AF003C7EED /* BasicDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicDemoController.h; sourceTree = "<group>"; };
+		A28786B81FE7D1AF003C7EED /* BasicDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicDemoController.m; sourceTree = "<group>"; };
+		A28786BA1FE7D1C3003C7EED /* ImageDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageDemoController.h; sourceTree = "<group>"; };
+		A28786BB1FE7D1C3003C7EED /* ImageDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageDemoController.m; sourceTree = "<group>"; };
+		A28786BD1FE7D1D3003C7EED /* PopDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopDemoController.h; sourceTree = "<group>"; };
+		A28786BE1FE7D1D3003C7EED /* PopDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopDemoController.m; sourceTree = "<group>"; };
+		A29093E01FE8A98500634E1D /* timg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +73,13 @@
 				A287866D1FE75CDE003C7EED /* AppDelegate.m */,
 				A287866F1FE75CDE003C7EED /* ViewController.h */,
 				A28786701FE75CDE003C7EED /* ViewController.m */,
+				A28786B71FE7D1AF003C7EED /* BasicDemoController.h */,
+				A28786B81FE7D1AF003C7EED /* BasicDemoController.m */,
+				A28786BA1FE7D1C3003C7EED /* ImageDemoController.h */,
+				A28786BB1FE7D1C3003C7EED /* ImageDemoController.m */,
+				A28786BD1FE7D1D3003C7EED /* PopDemoController.h */,
+				A28786BE1FE7D1D3003C7EED /* PopDemoController.m */,
+				A29093E01FE8A98500634E1D /* timg.jpeg */,
 				A28786721FE75CDE003C7EED /* Main.storyboard */,
 				A28786751FE75CDE003C7EED /* Assets.xcassets */,
 				A28786771FE75CDE003C7EED /* LaunchScreen.storyboard */,
@@ -129,6 +147,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A29093E11FE8AA5400634E1D /* timg.jpeg in Resources */,
 				A28786791FE75CDE003C7EED /* LaunchScreen.storyboard in Resources */,
 				A28786761FE75CDE003C7EED /* Assets.xcassets in Resources */,
 				A28786741FE75CDE003C7EED /* Main.storyboard in Resources */,
@@ -144,7 +163,10 @@
 			files = (
 				A28786711FE75CDE003C7EED /* ViewController.m in Sources */,
 				A287867C1FE75CDE003C7EED /* main.m in Sources */,
+				A28786BF1FE7D1D3003C7EED /* PopDemoController.m in Sources */,
 				A287866E1FE75CDE003C7EED /* AppDelegate.m in Sources */,
+				A28786BC1FE7D1C3003C7EED /* ImageDemoController.m in Sources */,
+				A28786B91FE7D1AF003C7EED /* BasicDemoController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,9 +301,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JL36ZP2HRY;
 				INFOPLIST_FILE = CoreMotion/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.demo.CoreMotion;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xxfdemo.CoreMotion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -292,9 +316,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JL36ZP2HRY;
 				INFOPLIST_FILE = CoreMotion/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.demo.CoreMotion;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xxfdemo.CoreMotion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
